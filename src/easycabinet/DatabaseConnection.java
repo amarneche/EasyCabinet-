@@ -50,6 +50,7 @@ public class DatabaseConnection {
                                     "	NumPatient int PRIMARY KEY ,\n" +
                                     "	Nom VARCHAR(50),\n" +
                                     "	Prenom VARCHAR(50),\n" +
+                                    "   sexe VARCHAR(5),\n"+
                                     "	AnneDeNaissance int CHECK (AnneDeNaissance BETWEEN 1900 AND 2100),\n" +
                                     "	Mobile VARCHAR(11)\n" +
                                     ")";
