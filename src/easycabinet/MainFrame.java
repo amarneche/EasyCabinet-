@@ -5,6 +5,7 @@
  */
 package easycabinet;
 
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ListCellRenderer;
@@ -16,21 +17,19 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author Amar
  */
 public class MainFrame extends javax.swing.JFrame {
-     Patient patients [];
+     Patient[] patients ;
      PatientNameCellRender cellRender ;
     /**
      * Creates new form MainFrame
      */
     public MainFrame() {
-        
-        cellRender =new PatientNameCellRender();
-        patientList.setCellRenderer(cellRender);
-        
-        patients =new Patient[10];
-        for(Patient p :patients){
-            p=new Patient("Amar1","Neche ","0673377481","Homme",1996);
-            
+        patients= new Patient[10];
+        for(Patient p:patients){
+            p=new Patient("Amar","Neche","jsp","jsp", 22);
         }
+       
+
+        
         
         
         try {
@@ -39,6 +38,9 @@ public class MainFrame extends javax.swing.JFrame {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
         initComponents();
+        
+        cellRender =new PatientNameCellRender();
+        patientList.setCellRenderer(cellRender);
     }
 
     /**
