@@ -77,6 +77,7 @@ public class PatientNameCellRender extends javax.swing.JPanel implements ListCel
     public Component getListCellRendererComponent(JList list, Patient value, int index, boolean isSelected, boolean cellHasFocus) {
         
         nameLabel.setText("hello"+(Math.random()*100));
+        value= (Patient) list.getModel().getElementAt(index);
         if(value==null){
             
             System.out.println("NULL");
